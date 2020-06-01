@@ -19,7 +19,10 @@ function WithData(BaseComponent) {
       var endpoint = "10.0.0.109:" + ENDPOINT_PORT;
 
       this.state = {
-        rows: [],
+        data_packet: {pressure_low: 80, pressure_high: 310, relay_start: 1, relay_stop: 0, relay_bleed: 0, relay_motor: 0, relay_pump: 0, relay_chiller: 0,
+           timer_mode2: 10, timer_mode4: 0, timer_start_relay: 2, timer_stop_relay: 1, timer_bleed_relay: 0, timer_motor_relay: 0, 
+           timer_shut_down_counter: 2, current_mode: 2, start_stop: 0, compressor: 1},
+           // null,
         endpoint: endpoint,
         socket: socketIOClient(endpoint)
       };      
@@ -33,7 +36,8 @@ function WithData(BaseComponent) {
           if(this._isMounted) {
             try{
               var json = await JSON.parse(data);
-              this.setState({ rows: json.machines });
+              this.setState({ data_packet: json.nitrogenData });
+              
             }
             catch(error){
               console.log(error);

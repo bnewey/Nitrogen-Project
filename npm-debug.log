@@ -7,7 +7,7 @@
 6 silly lifecycle next-mysql@1.0.0~predev: no script for predev, continuing
 7 info lifecycle next-mysql@1.0.0~dev: next-mysql@1.0.0
 8 verbose lifecycle next-mysql@1.0.0~dev: unsafe-perm in lifecycle true
-9 verbose lifecycle next-mysql@1.0.0~dev: PATH: /usr/share/npm/bin/node-gyp-bin:/home/bbnewey/node-workspace/next-mysql/node_modules/.bin:/bbnewey/home/Downloads/blender-2.79b-linux-glibc219-x86_64:/bbnewey/home/Downloads/blender-2.79b-linux-glibc219-x86_64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/sp/bin:/opt/sp/bin
+9 verbose lifecycle next-mysql@1.0.0~dev: PATH: /usr/share/npm/bin/node-gyp-bin:/home/bbnewey/node-workspace/next-mysql/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/sp/bin
 10 verbose lifecycle next-mysql@1.0.0~dev: CWD: /home/bbnewey/node-workspace/next-mysql
 11 silly lifecycle next-mysql@1.0.0~dev: Args: [ '-c', 'node server.js' ]
 12 silly lifecycle next-mysql@1.0.0~dev: Returned: code: 1  signal: null
@@ -24,7 +24,7 @@
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
 15 verbose pkgid next-mysql@1.0.0
 16 verbose cwd /home/bbnewey/node-workspace/next-mysql
-17 error Linux 5.0.0-36-generic
+17 error Linux 4.15.0-91-generic
 18 error argv "/usr/bin/node" "/usr/bin/npm" "run" "dev"
 19 error node v8.10.0
 20 error npm  v3.5.2

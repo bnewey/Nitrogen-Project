@@ -22,7 +22,6 @@ import ReconnectSnack from '../UI/ReconnectSnack';
 const util = require('../../util/util');
 
 
-//Necessary to use this function to allow the useStyles hook to work
 const UiTableWithStyles = ({rows , endpoint}) => {
   const router = useRouter();
 
@@ -121,14 +120,14 @@ const UiTableWithStyles = ({rows , endpoint}) => {
       { array.map((row, i) => (
           <Grid item xs={1} key={i} className={ i == 0 || i==1 ||i==6 ? classes.grid_machine_large : classes.grid_machine_small }>          
             <div className={classes.clickableDiv} onClick={() => {machineClicked(row.name, i)}} > 
-            <Paper classes={{root:classes.machine}} className={  i == 0 || i==1 ||i==6 ? classes.machine_type_1 : classes.machine_type_2} style={{backgroundImage: `${row.imageURL}`}}> 
-            <span className={row.temp > 100 ? classes.sm_box_red : classes.sm_box_green}>{row.temp}&#176;</span>
-            <br/><span className={row.pressure > 100 ? classes.sm_box_red : classes.sm_box_green}>{row.pressure}</span>
-            </Paper> 
+              <Paper classes={{root:classes.machine}} className={  i == 0 || i==1 ||i==6 ? classes.machine_type_1 : classes.machine_type_2} style={{backgroundImage: `${row.imageURL}`}}> 
+                <span className={row.temp > 100 ? classes.sm_box_red : classes.sm_box_green}>{row.temp}&#176;</span>
+                <br/><span className={row.pressure > 100 ? classes.sm_box_red : classes.sm_box_green}>{row.pressure}</span>
+              </Paper> 
             </div>
             <br/><label className={classes.Label}>{row.name}</label><hr/>
             <div className={classes.SplitButtonWrapper}>
-            <SplitButton endpoint={endpoint} name={row.machine} options={['Turn On', 'Turn Off', 'Restart']}/>
+              <SplitButton endpoint={endpoint} name={row.machine} options={['Turn On', 'Turn Off', 'Restart']}/>
             </div>
           </Grid>
       ))}
